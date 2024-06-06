@@ -1,0 +1,17 @@
+{
+  "name": "fsm",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "src/fsm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.3.1"
+  }
+}
