@@ -6,12 +6,14 @@
   "main": "src/fsm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js"
+    "fsm_example": "node src/fsm.example.js",
+    "xstate_example": "node src/xstate.example.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "prettier": "^3.3.1"
+    "prettier": "^3.3.1",
+    "xstate": "^5.13.1"
   }
 }

@@ -1,5 +1,9 @@
 import { FSM } from './fsm.js'
 
+/**
+ * Simple example custom fsm machine
+ */
+
 const states = {
   happy: 'happy',
   leave: 'leave',
@@ -8,7 +12,9 @@ const states = {
 }
 
 const transitions = {
+  // state
   happy: {
+    // transition
     leave: 'sad',
   },
   sad: {
