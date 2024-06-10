@@ -1,4 +1,4 @@
-import { FSM } from './fsm.js'
+import { FSM } from './fsm'
 
 /**
  * Simple example custom fsm machine

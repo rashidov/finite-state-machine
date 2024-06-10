@@ -1,10 +1,10 @@
-export const FSM = (initState, transitions) => {
-  const subscriptions = []
-  const subscriptionsRelatedToTriggers = {}
+export const FSM = (initState: any, transitions: any) => {
+  const subscriptions: any[] = []
+  const subscriptionsRelatedToTriggers: any = {}
 
   return {
     state: initState,
-    subscribe(f, trigger = null) {
+    subscribe(f: (arg: any) => void, trigger = null) {
       if (trigger) {
         const subscriptionsByTrigger = subscriptionsRelatedToTriggers[trigger] || []
         subscriptionsByTrigger.push(f)
@@ -14,7 +14,7 @@ export const FSM = (initState, transitions) => {
 
       subscriptions.push(f)
     },
-    send(trigger) {
+    send(trigger: any) {
       const currentState = this.state
       const nextState =
         transitions[currentState] && transitions[currentState][trigger]
@@ -26,7 +26,7 @@ export const FSM = (initState, transitions) => {
         subscriptions.forEach((f) => f(this.state))
         const subscriptionsByTrigger = subscriptionsRelatedToTriggers[trigger]
         if (subscriptionsByTrigger) {
-          subscriptionsByTrigger.forEach((f) => f(this.state))
+          subscriptionsByTrigger.forEach((f: (arg: any) => void) => f(this.state))
         }
       }
     },

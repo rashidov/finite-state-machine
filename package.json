@@ -1,19 +1,23 @@
 {
   "name": "fsm",
   "version": "1.0.0",
-  "type": "module",
   "description": "",
-  "main": "src/fsm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fsm_example": "node src/fsm.example.js",
-    "xstate_example": "node src/xstate.example.js"
+    "build": "npx tsc",
+    "fsm_example": "node src/fsm/example.ts",
+    "xstate_example": "node src/xstate/example.ts",
+    "xstate_some_app": "npx tsc && node dist/xstate/some_app_init.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^8.2.2",
     "prettier": "^3.3.1",
     "xstate": "^5.13.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
   }
 }
